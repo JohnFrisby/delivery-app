@@ -1,9 +1,7 @@
-import PeoplePage from "./people-page";
-import PlanetPage from "./planets-page";
-import StarshipPage from "./starships-page";
+import HomePage from "./home-page";
+import CartPage from "./cart-page";
 
 export {
-    PeoplePage,
-    PlanetPage,
-    StarshipPage
+    HomePage,
+    CartPage
 };

@@ -1,33 +1,22 @@
 import React from 'react';
-
 import './header.css';
+import { Link } from "react-router-dom";
 
-const Header = ({onServiceChange}) => {
-  return (
-    <div className="header d-flex">
-      <h3>
-        <a href="#/">
-          StarDB
-        </a>
-      </h3>
-      <ul className="d-flex">
-        <li>
-          <a href="#/people">People</a>
-        </li>
-        <li>
-          <a href="#/planets">Planets</a>
-        </li>
-        <li>
-          <a href="#/starships">Starships</a>
-        </li>
-      </ul>
-      <button 
-        onClick={onServiceChange}
-        className="btn btn-primary btn-sm">
-        Change Servise
-      </button>
-    </div>
-  );
-};
+const Header = ({ numItems, total }) => {
+    return (
+        <header className="header row">
+            <Link to="/">
+                <div className="logo text-dark">ReStore</div>
+            </Link>
+
+            <Link to="cart">
+                <div className="shopping-cart">
+                    <i className="cart-icon fa fa-shoping-cart" />
+                    {numItems} item (${total})
+                </div>
+            </Link>
+        </header>
+    )
+}
 
 export default Header;
