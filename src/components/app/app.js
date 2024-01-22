@@ -7,7 +7,7 @@ import './app.css';
 const App = () => {
     return (
         <main role="main" className="container">
-            <Header numItems={5} total={210}/>
+            <Header numItems={0} total={0}/>
             <Routes>
                 <Route
                     path="/"

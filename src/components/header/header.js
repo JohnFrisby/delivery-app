@@ -6,7 +6,7 @@ const Header = ({ numItems, total }) => {
     return (
         <header className="header row">
             <Link to="/">
-                <div className="logo text-dark">ReStore</div>
+                <div className="logo text-dark">Delivery-App</div>
             </Link>
 
             <Link to="cart">
