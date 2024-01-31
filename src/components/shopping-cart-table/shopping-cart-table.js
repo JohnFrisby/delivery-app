@@ -20,7 +20,7 @@ const ShoppingCartTable = ({ items, total, onIncrease, onDecrease, onDelete }) =
                     <button
                         onClick={() => onDelete(id)}
                         className="btn btn-outline-danger btn-sm float-right">
-                        <i className="fa fa-trash-o" />
+                        <i className="fa-trash" />
                     </button>
                     <button
                         onClick={() => onIncrease(id)}

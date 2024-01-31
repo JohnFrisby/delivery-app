@@ -11,7 +11,7 @@ const Header = ({ numItems, total }) => {
 
             <Link to="cart">
                 <div className="shopping-cart">
-                    <i className="cart-icon fa fa-shoping-cart" />
+                    <i className="cart-icon fa-shoping-cart" />
                     {numItems} item (${total})
                 </div>
             </Link>
