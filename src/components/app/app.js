@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import ShopHeader from "../shop-header";
 import Header from "../header";
 import { HomePage, CartPage } from "../pages";
 import './app.css';
@@ -8,7 +7,7 @@ import './app.css';
 const App = () => {
     return (
         <main role="main" className="container">
-            <ShopHeader numItems={0} total={0}/>
+            <Header numItems={0} total={0}/>
             <Routes>
                 <Route
                     path="/"
