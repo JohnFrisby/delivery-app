@@ -11,7 +11,7 @@ import store from "./store";
 
 const bookstoreService = new BookstoreService ();
 
-const root=ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Provider store={store}>
         <ErrorBoundry>
