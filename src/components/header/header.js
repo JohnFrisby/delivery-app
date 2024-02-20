@@ -1,5 +1,6 @@
 import React from 'react';
 import './header.css';
+import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 
 const Header = ({ numItems, total }) => {
