@@ -1,29 +1,30 @@
 import React from 'react';
 import './header.css';
-import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
-const Header = ({ numItems, total }) => {
+const Header = ( { items, total }) => {
     return (
         <header className="header row">
             <Link to="/">
                 <div className="logo text-dark">Delivery-App</div>
+                {items} item (${total})
             </Link>
 
             <Link to="cart">
                 <div className="shopping-cart">
                     <i className="cart-icon fa-shoping-cart" />
-                    {numItems} item (${total})
                 </div>
             </Link>
         </header>
     )
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
     return {
-        total: state.orderTotal.total
-    }
-}
+        items: state.items,
+        total: state.total
+    };
+};
 
-export default connect(mapStateToProps, null)(Header);
+export default connect(mapStateToProps)(Header);
