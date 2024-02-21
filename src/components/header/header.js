@@ -20,4 +20,10 @@ const Header = ({ numItems, total }) => {
     )
 }
 
-export default Header;
+const mapStateToProps = state => {
+    return {
+        total: state.orderTotal.total
+    }
+}
+
+export default connect(mapStateToProps, null)(Header);

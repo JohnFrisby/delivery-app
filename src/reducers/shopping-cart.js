@@ -1,4 +1,3 @@
-import {connect} from 'react-redux';
 const updateCartItems = (cartItems, item, idx) => {
 
     if (item.count === 0) {
@@ -87,7 +86,5 @@ const updateShoppingCart = (state, action) => {
 
     }
 };
-const mapStateToProps = (orderTotal, cartItems) => {
-    return {orderTotal, cartItems};
-}
-export default connect(mapStateToProps)(updateShoppingCart);
+
+export default updateShoppingCart;

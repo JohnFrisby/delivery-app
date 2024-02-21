@@ -7,7 +7,7 @@ import './app.css';
 const App = () => {
     return (
         <main role="main" className="container">
-            <Header />
+            <Header/>
             <Routes>
                 <Route
                     path="/"
