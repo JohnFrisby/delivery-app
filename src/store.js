@@ -22,7 +22,7 @@ const store = createStore(reducer, composeWithDevTools(applyMiddleware(ThunkMidd
 const delayedActionCreator = (timeout) => (dispatch) => {
     setTimeout(() => dispatch({
         type: 'DELAYED_ACTION'
-    }), 5000);
+    }), 3000);
 }
 
 store.dispatch(delayedActionCreator(3000));

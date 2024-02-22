@@ -25,7 +25,7 @@ export default class BookstoreService {
                     resolve(this.data)
                 }
                                 
-            }, 700);
+            }, 400);
         });
     }
 }
