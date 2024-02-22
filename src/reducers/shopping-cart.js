@@ -37,7 +37,7 @@ const updateCartItem = (book, item = {}, quantity) => {
 };
 
 const updateOrder = (state, bookId, quantity) => {
-    const { bookList: {books}, shoppingCart: {cartItems} } = state;
+    const { bookList: { books }, shoppingCart: { cartItems } } = state;
 
     const book = books.find(({ id }) => id === bookId);
     const itemIndex = cartItems.findIndex(({ id }) => id === bookId);
@@ -52,8 +52,8 @@ const updateOrder = (state, bookId, quantity) => {
         total += newItems[i].total * newItems[i].count;
     }*/
 
-   const total = newItems.reduce((sum, current) => {
-return sum + (current.total * current.count);
+    const total = newItems.reduce((sum, current) => {
+        return sum + (current.total * current.count);
     }, 0);
 
     return {
@@ -82,8 +82,8 @@ const updateShoppingCart = (state, action) => {
             const item = state.shoppingCart.cartItems.find(({ id }) => id === action.payload);
             return updateOrder(state, action.payload, -item.count);
 
-    default:
-        return state.shoppingCart;
+        default:
+            return state.shoppingCart;
 
     }
 };
