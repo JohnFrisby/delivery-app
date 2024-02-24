@@ -3,12 +3,21 @@ import './header.css';
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
-const Header = ( { items, total }) => {
+const Header = ( { count, total, book }) => {
+    if (count === 0) {
+        book = "books";
+    }
+    else if (count === 1) {
+        book = "book";
+    }
+    else {
+        book = "books";
+    }
     return (
         <header className="header row">
             <Link to="/">
                 <div className="logo text-dark">Delivery-App</div>
-                {items} item (${total})
+                {count} {book} (${total})
             </Link>
 
             <Link to="cart">
@@ -22,7 +31,7 @@ const Header = ( { items, total }) => {
 
 const mapStateToProps = (state) => {
     return {
-        items: state.shoppingCart.count,
+        count: state.shoppingCart.totalCount,
         total: state.shoppingCart.orderTotal
     };
 };
