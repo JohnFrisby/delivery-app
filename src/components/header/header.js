@@ -22,7 +22,7 @@ const Header = ( { items, total }) => {
 
 const mapStateToProps = (state) => {
     return {
-        items: state.shoppingCart.cartItems.count,
+        items: state.shoppingCart.count,
         total: state.shoppingCart.orderTotal
     };
 };
