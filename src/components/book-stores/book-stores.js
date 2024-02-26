@@ -1,8 +1,10 @@
-import React, { Component } from "react";
-import './book-list.css';
+import React from "react";
+import './book-stores.css';
 
 const BookStores = () => {
-    
+    return (
+        <div>Commerce Book Stores</div>
+    );
 };
 
 export default (BookStores);
