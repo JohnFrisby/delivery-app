@@ -1,9 +1,25 @@
 import React from "react";
 import './book-stores.css';
+import BookList from "../book-list/book-list";
 
-const BookStores = () => {
+const BookStores = (props) => {
+const {books, onItemSelected} = props;
     return (
-        <div>Commerce Book Stores</div>
+        <ul className="book-store">
+            {
+                books.map((book) => {
+                    return (
+                        <li key={book.id}>
+                            <BookList
+                            book={book}
+                            onItemSelected={() => onItemSelected(book.id)} />
+                        </li>
+                    )
+                })
+
+            }
+
+        </ul>
     );
 };
 
