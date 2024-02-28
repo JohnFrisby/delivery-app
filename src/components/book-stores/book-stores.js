@@ -6,19 +6,8 @@ const BookStores = (props) => {
 const {books, onItemSelected} = props;
     return (
         <ul className="book-store">
-            {
-                books.map((book) => {
-                    return (
-                        <li key={book.id}>
-                            <BookList
-                            book={book}
-                            onItemSelected={() => onItemSelected(book.id)} />
-                        </li>
-                    )
-                })
-
-            }
-
+        книга
+        {onItemSelected}
         </ul>
     );
 };
