@@ -6,8 +6,7 @@ const BookStores = (props) => {
 const {books, onItemSelected} = props;
     return (
         <ul className="book-store">
-        книга
-        {onItemSelected}
+        books
         </ul>
     );
 };
