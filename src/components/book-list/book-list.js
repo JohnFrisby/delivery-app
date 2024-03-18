@@ -4,7 +4,7 @@ import BookListItem from '../book-list-item/book-list-item';
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
-import { withBooksService } from '../hoc';
+import { withBooksService } from "../hoc";
 import Spinner from "../spinner/spinner";
 import ErrorIndicator from "../error-indicator/error-indicator";
 import { fetchBooks, bookAddedToCart } from '../../actions';
