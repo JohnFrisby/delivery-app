@@ -26,15 +26,13 @@ const updateCartItem = (book, item = {}, quantity) => {
         id = book.id,
         count = 0,
         title = book.title,
-        total = 0,
-        roundedNumber = 0
+        total = 0
     } = item;
     return {
         id,
         title,
         count: count + quantity,
-        total: total + quantity * book.price,
-        roundedNumber: parseFloat(total.toFixed(2))
+        total: total + quantity * book.price
     };
 };
 
@@ -55,7 +53,7 @@ const updateOrder = (state, bookId, quantity) => {
     }*/
 
     const total = newItems.reduce((sum, current) => {
-        return sum + (current.roundedNumber * current.count);
+        return sum + (current.total * current.count);
     }, 0);
 
     const count = newItems.reduce((sum, current) => {
