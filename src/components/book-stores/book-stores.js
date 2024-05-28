@@ -1,12 +1,22 @@
 import React from "react";
 import './book-stores.css';
-import BookList from "../book-list/book-list";
+import BookStoreItem from "../book-stores-item/book-stores-item";
 
 const BookStores = (props) => {
-const {books, onItemSelected} = props;
+const {stores, onItemSelected} = props;
     return (
         <ul className="book-store">
-        books
+        {
+                stores.map((store) => {
+                    return (
+                        <li key={store.id}>
+                            <BookStoreItem
+                                store={store}
+                                onItemSelected={() => onItemSelected(store.id)} />
+                        </li>
+                    );
+                })
+            }
         </ul>
     );
 };
