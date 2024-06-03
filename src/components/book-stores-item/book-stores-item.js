@@ -1,7 +1,7 @@
 import React from "react";
 import './book-stores-item.css';
 
-const BookStoreItem = ({ store, onItemSelected }) => {
+const BookStoreItem = ({ store }) => {
     const { name } = store;
     return (
         <div className="book-store-item">
